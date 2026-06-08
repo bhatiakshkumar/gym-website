@@ -1,0 +1,533 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #121212;
+  overflow-x: hidden; /* Screen se bahar content na jaye */
+}
+
+/* --- NAVBAR SECTION --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  color: white;
+  background-color: #292723;
+  padding: 0 40px; /* Padding se clean spacing */
+}
+
+.iron {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Button Global Styles */
+button {
+  border: 1px solid white;
+  background-color: #292723;
+  color: white;
+  height: 40px;
+  width: 140px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* --- HERO SECTION --- */
+.image {
+  position: relative; /* Image container absolute elements ke liye parent banega */
+  width: 100%;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Left side se elegant look ke liye */
+  transform: translateY(-50%);
+  color: white;
+}
+
+.image-text h1 {
+  font-size: 55px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+/* Hero Section Buttons Layout */
+.image-text .button {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btnn {
+  background-color: white;
+  color: black;
+  width: 180px;
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.call span {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- CONTAINER / BOXES SECTION --- */
+.container {
+  padding: 80px 0; /* Fixed height hatayi, padding lagayi */
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h5 {
+  color: gray;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.container p {
+  width: 60%;
+  text-align: center;
+  font-size: 24px; /* 35px bohot bada tha paragraph ke liye */
+  color: gray;
+  margin-bottom: 50px;
+}
+
+.box {
+  display: flex;
+  gap: 30px;
+}
+
+.boxx {
+  height: 280px;
+  width: 280px;
+  background-color: #181818;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box3 {
+  background-color: #0d0d0d;
+}
+
+.boxx svg {
+  height: 40px;
+  width: 40px;
+}
+
+.boxx h3 {
+  font-size: 18px;
+  color: white;
+  margin: 15px 0 10px 0;
+}
+
+.boxx p {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.6;
+  width: 100%;
+  text-align: left;
+}
+
+.section {
+  margin-top: 60px;
+}
+
+.bg-text {
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.1); /* Background text ko thoda light kiya */
+  text-align: center;
+}
+
+/* --- PERFORMANCE & BANNER SECTION --- */
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  color: white;
+}
+
+.cont h5 {
+  color: gray;
+}
+
+.cont p {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 40px; /* HTML ke <br> ki jagah margin-bottom use kiya */
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+}
+
+/* Pseudo elements blur and gradient */
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 30%, transparent);
+  z-index: 1;
+}
+
+.banner h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  width: 450px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.banner button {
+  background-color: white;
+  color: black;
+  margin-top: 25px;
+}
+
+/* --- TRAINERS SECTION --- */
+.trainer {
+  padding: 80px 0;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.trainer p {
+  text-align: center;
+  color: gray;
+}
+
+.trainer h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: #333;
+  margin: 40px auto;
+}
+
+.coach {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.coach p {
+  font-size: 24px;
+  color: white;
+}
+
+.coach span {
+  font-size: 12px;
+  color: gray;
+}
+
+.coach button {
+  background-color: white;
+  color: black;
+  width: 110px;
+}
+
+/* Numbers Section */
+.numbers ul {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 60px;
+}
+
+.numbers li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.numbers span {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Gym Grid Gallery (Fixed Name) */
+.hero {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 80px;
+  padding: 0 40px;
+}
+
+.hero div[class^="gym-"] { /* Target automatically all gym- classes */
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.hero div img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Become a member */
+.become {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.become h2 {
+  font-size: 60px;
+  color: #444;
+}
+
+.become span {
+  color: white;
+}
+
+.become button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* --- FOOTER SECTION --- */
+.footer {
+  background-color: #0b0b0b;
+  color: white;
+  padding: 80px 10px 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.footer-email h2{
+  margin-bottom: 10px;
+}
+
+.footer-email, .footer-service, .footer-contact {
+  flex: 1;
+  max-width: 300px;
+}
+.footer-contact h3{
+  margin-bottom: 10px;
+}
+.footer-contact p{
+  margin-bottom : 10px;
+  color: gray;
+}
+.footer-contact span{
+  color: white;
+}
+
+
+.footer-service ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-service h3{
+  margin-bottom: 10px;
+}
+.footer-service li {
+  color: gray;
+}
+
+.footer-email input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 40px;
+  background: transparent;
+  color: white;
+  margin: 20px 0;
+}
+
+.footer-email button {
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  border-top: 1px solid #222;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+/* --- 📱 MOBILE & TABLET RESPONSIVE STYLES --- */
+
+@media (max-width: 992px) {
+  /* Navbar adjustments */
+  .nav {
+    padding: 0 20px;
+  }
+  ul {
+    gap: 20px;
+  }
+  
+  /* Hero section text mobile par thoda chhota hoga */
+  .image-text h1 {
+    font-size: 35px;
+  }
+
+  /* 3 Boxes jo desktop par side-by-side the, mobile par ek ke niche ek aayenge */
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Banners layout on mobile */
+  .overlay {
+    left: 30px;
+    width: 80%;
+  }
+  .banner p {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  /* Coach section flexible */
+  .coach {
+    width: 90%;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .coach p {
+    font-size: 20px;
+  }
+  .coach button {
+    margin: 10px 0 0 0;
+  }
+
+  /* Stats numbers vertically align honge */
+  .numbers ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Gym gallery grid mobile par adjust hogi */
+  .hero {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* Footer components stack honge */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-email {
+    align-items: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Ultra-small mobile phones ke liye */
+  .nav ul {
+    display: none; /* Mobile menu bars ke bina list chhupa di */
+  }
+  .image-text h1 {
+    font-size: 24px;
+  }
+  .image-text .button {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .become h2 {
+    font-size: 35px;
+  }
+}
